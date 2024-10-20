@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #333;
+  background-color: #f0f8ff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #0077be;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #005c8f;
+}
+
+nav a[aria-current='page'] {
+  background-color: #005c8f;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #0077be;
+  text-align: center;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 300px;
+}
+
+#search-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0077be;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+#category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #d0d0d0;
+}
+
+#species-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.species-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.species-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.species-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.species-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.conservation-status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-lc { background-color: #4caf50; color: white; }
+.status-nt { background-color: #8bc34a; color: white; }
+.status-vu { background-color: #ffc107; color: black; }
+.status-en { background-color: #ff9800; color: white; }
+.status-cr { background-color: #f44336; color: white; }
+
+@media (max-width: 600px) {
+  nav {
+      flex-direction: column;
+  }
+
+  #search-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
