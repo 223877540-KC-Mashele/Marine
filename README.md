@@ -41,30 +41,7 @@ Access the app: Once the development server is running, you can access the app i
 Project Structure
 Here's a brief overview of the project structure:
 
-php
-Copy code
-marinespotter/
-│
-├── public/
-│   ├── index.html            # Main HTML file
-│   └── assets/               # App assets like images
-│
-├── src/
-│   ├── components/
-│   │   ├── Navbar.js         # Navbar component
-│   │   ├── Search.js         # Search component for species
-│   │   ├── CategoryFilters.js# Filter species by categories
-│   │   ├── SpeciesGrid.js    # Grid displaying species cards
-│   │   ├── SpeciesData.js    # Dummy data for species
-│   │   ├── Login.js          # User login component
-│   │   ├── Register.js       # User registration component
-│   │   └── Profile.js        # User profile component
-│   ├── App.js                # Main app component
-│   ├── App.css               # Main stylesheet
-│   └── index.js              # Entry point
-│
-├── package.json              # Project metadata and scripts
-└── README.md                 # Project documentation
+
 Running the App
 Start the development server: To run the app locally for development, use:
 
